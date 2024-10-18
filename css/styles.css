@@ -1,0 +1,180 @@
+:root {
+    --blue: #2e8cf7;
+    --light-blue: #a3d9f5;
+    --orange: #f7992e;
+    --white: #FFF;
+    --light-grey: #f0f0f0;
+    --black: #000000a4;
+
+    /* Layout */
+    --max-width: 800px;
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--light-grey);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 1rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 1rem auto 0;
+    gap: 1rem;
+
+    h1 {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: var(--orange);
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 40px;
+
+    section {
+        justify-content: center;
+        display: flex;
+        width: 100%;
+
+        &.header-buttons {
+            background-color: var(--blue);
+            column-gap: 10px;
+            display: flex;
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding-bottom: 4px;
+
+            button {
+                border: 0;
+                background-color: transparent;
+                color: var(--white);
+                font-size: 1rem;
+                padding: 0.5rem 1rem;
+                cursor: pointer;
+                transition: all 0.4s ease;
+
+                &:hover {
+                    box-shadow: 2px 2px var(--black),
+                        inset 2px 2px var(--light-blue),
+                        inset -2px -2px var(--blue);
+                }
+            }
+
+        }
+
+        aside {
+            flex-grow: 1;
+            width: 100%;
+            height: 100%;
+            height: 400px;
+            background-color: #2e8cf7;
+
+            nav {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                gap: .6rem;
+                flex-wrap: wrap;
+
+                button {
+                    color: var(--white);
+                    width: 2rem;
+                    height: 2rem;
+                    border: none;
+                    box-shadow: 2px 2px var(--black),
+                        inset 2px 2px var(--light-blue),
+                        inset -2px -2px var(--blue);
+                    border-radius: 50%;
+                    background: var(--light-blue) url("../images/cursors/pencil.png") no-repeat center;
+                    background-size: 1.2rem;
+                    object-fit: cover;
+                    cursor: pointer;
+                    transition: all 0.4s ease;
+
+                    &:hover,
+                    &.active {
+                        box-shadow: none;
+                        background-color: var(--light-grey);
+                    }
+
+                    &#btn-clear {
+                        background-image: url("../images/icons/trash.png");
+                    }
+                    &#btn-rectangle {
+                        background-image: url("../images/icons/rectangle.png");
+                    }
+                    &#btn-ellipse {
+                        background-image: url("../images/icons/circle.png");
+                    }
+                    &#btn-picker {
+                        background-image: url("../images/cursors/picker.png");
+                    }
+                    &#btn-erase {
+                        background-image: url("../images/cursors/eraser.png");
+                    }
+                    &#btn-eraseSelection {
+                        background-image: url("../images/icons/eraser-selection.png");
+                    }
+                    &#btn-undo {
+                        background-image: url("../images/icons/undo.png");
+                    }
+                }
+            }
+        }
+
+        canvas {
+            align-self: center;
+            width: 100%;
+            height: 400px;
+            background-color: var(--white);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    background-color: var(--blue);
+    padding: 0 0 15px 15px;
+    display: flex;
+    align-items: center;
+
+    label {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+
+        input {
+            opacity: 0;
+        }
+    }
+}

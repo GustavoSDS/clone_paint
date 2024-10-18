@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Clone Paint">
+    <meta name="keywords" content="Clone Paint, Clone, Paint, JavaScript, HTML, CSS">
+    <meta name="author" content="Gustavo S. Dos Santos">
+    <title>Clone Paint</title>
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="./images/icon.png" alt="Clone Paint Icon">
+        <h1>Paint</h1>
+    </header>
+
+    <main>
+        <section class="header-buttons">
+            <button>File</button>
+            <button>Edit</button>
+            <button>View</button>
+            <button>Image</button>
+            <button>Options</button>
+            <button>Help</button>
+        </section>
+        <section>
+            <aside>
+                <nav>
+                    <button title="Pincel" id="btn-draw"></button>
+                    <button title="Borrador" id="btn-erase"></button>
+                    <button title="Capturar color" id="btn-picker"></button>
+                    <button title="Rectángulo" id="btn-rectangle"></button>
+                    <button title="Elipse" id="btn-ellipse"></button>
+                    
+                    <br>
+                    <button title="Deshacer" id="btn-undo"></button>
+                    <button title="Limpiar por Sección" id="btn-eraseSelection"></button>
+                    <button title="Limpiar todo" id="btn-clear"></button>
+                </nav>
+            </aside>
+            <canvas id="canvas" width="670" height="400"></canvas>
+        </section>
+    </main>
+
+    <footer>
+        <label for="color-picker">
+            <img src="./images/icon.png" alt="Color Picker Icon" title="Elige el color">
+            <input type="color" id="color-picker" value="#2e8cf7">
+        </label>
+    </footer>
+
+    <script src="main.js" type="module" async defer></script>
+</body>
+</html>
