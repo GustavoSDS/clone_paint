@@ -2,4 +2,5 @@ TODO: limpiar parte del canvas segun la selección
 Para hacerlo se debe usar un boton de selección y luego al hace click en el boton borrar se pued usar: 
 	ctx.clearRect(medidas del rectángulo seleccionado)
 
-
+TODO: poder guardar una imagen del dibujo
+Para hacerlo se debe guardar el canvas en una variable y luego usar el boton de guardar imagen

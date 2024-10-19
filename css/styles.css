@@ -123,23 +123,35 @@ main {
                     &#btn-clear {
                         background-image: url("../images/icons/trash.png");
                     }
+
                     &#btn-rectangle {
                         background-image: url("../images/icons/rectangle.png");
                     }
+
                     &#btn-ellipse {
                         background-image: url("../images/icons/circle.png");
                     }
+
                     &#btn-picker {
                         background-image: url("../images/cursors/picker.png");
                     }
+
                     &#btn-erase {
                         background-image: url("../images/cursors/eraser.png");
                     }
+
                     &#btn-eraseSelection {
                         background-image: url("../images/icons/eraser-selection.png");
                     }
+
                     &#btn-undo {
                         background-image: url("../images/icons/undo.png");
+                    }
+
+                    &[disabled] {
+                        opacity: 0.5;
+                        cursor: not-allowed;
+                        pointer-events: none;
                     }
                 }
             }
@@ -167,14 +179,34 @@ footer {
     label {
         display: flex;
         align-items: center;
+        justify-content: center;
+        position: relative;
 
         img {
-            width: 2.5rem;
-            height: 2.5rem;
+            width: 3.2rem;
+            height: 3.2rem;
         }
 
         input {
-            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            translate: -50% -50%;
+            width: 20px;
+            height: 20px;
+            border: none;
+            border-radius: 50%;
+
+            &::-webkit-color-swatch-wrapper {
+                padding: 0;
+                border-radius: 50%;
+            }
+
+            &::-webkit-color-swatch {
+                border: none;
+                border-radius: 50%;
+            }
         }
     }
 }
